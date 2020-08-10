@@ -48,14 +48,20 @@ namespace FormDemo1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
             double radius = Convert.ToDouble(textBox1.Text);
             double Brutto = System.Convert.ToDouble(textBoxBrutto.Text);
+          
+                textBoxKreiumfang.Text = CMeineFormeln.Kreisumfang(radius).ToString("0.000");
 
-            textBoxKreiumfang.Text =  CMeineFormeln.Kreisumfang(radius).ToString("0.000");
+                textBoxKugelvolumen.Text = CMeineFormeln.KugelVolumen(radius).ToString("0.000");
 
-            textBoxKugelvolumen.Text = CMeineFormeln.KugelVolumen(radius).ToString("0.000");
-
-            textBoxNetto.Text = CMeineFormeln.Nettoberechnung(Brutto, 0.19).ToString("0.000");
+                textBoxNetto.Text = CMeineFormeln.Nettoberechnung(Brutto, 0.19).ToString("0.000");
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message + "!!! please, insert to input boxes");
+            }
         }
     }
 }

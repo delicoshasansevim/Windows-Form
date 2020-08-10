@@ -35,6 +35,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Thread, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.3.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackgroundImage.cs" />
+    <Compile Include="Debugging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debugging.Designer.cs">
+      <DependentUpon>Debugging.cs</DependentUpon>
+    </Compile>
     <Compile Include="Flaeche.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,13 +76,26 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetterSetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetterSetter.Designer.cs">
+      <DependentUpon>GetterSetter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gewicht.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gewicht.Designer.cs">
       <DependentUpon>Gewicht.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParentChildMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentChildMethod.Designer.cs">
+      <DependentUpon>ParentChildMethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="progressBar1\InvokeRequired.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schleifen.cs">
       <SubType>Form</SubType>
@@ -79,12 +103,34 @@
     <Compile Include="Schleifen.Designer.cs">
       <DependentUpon>Schleifen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetProgressBarValueCallback.cs" />
     <Compile Include="StaticElement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaticElement.Designer.cs">
       <DependentUpon>StaticElement.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubClass.Designer.cs">
+      <DependentUpon>SubClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TangentArcusTantgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TangentArcusTantgent.Designer.cs">
+      <DependentUpon>TangentArcusTantgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThreadTask.Designer.cs">
+      <DependentUpon>ThreadTask.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Debugging.resx">
+      <DependentUpon>Debugging.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Flaeche.resx">
       <DependentUpon>Flaeche.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,8 +140,14 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GetterSetter.resx">
+      <DependentUpon>GetterSetter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gewicht.resx">
       <DependentUpon>Gewicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentChildMethod.resx">
+      <DependentUpon>ParentChildMethod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +165,16 @@
     <EmbeddedResource Include="StaticElement.resx">
       <DependentUpon>StaticElement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubClass.resx">
+      <DependentUpon>SubClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TangentArcusTantgent.resx">
+      <DependentUpon>TangentArcusTantgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreadTask.resx">
+      <DependentUpon>ThreadTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +193,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiTARREN-BÜNDE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner11-blue-gravur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg111.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
